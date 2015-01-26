@@ -3,7 +3,7 @@ require 'faker'
 
 FactoryGirl.define do
    factory :feedback do |f|
-	f.text "Mike"
+	f.text { Faker::Lorem.sentence }
     end
 end
 
