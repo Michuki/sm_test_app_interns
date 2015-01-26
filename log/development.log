@@ -2963,3 +2963,69 @@ Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2015-01-26 02:10:20 
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-26 02:10:20 +0200
+
+
+Started GET "/feedbacks/new" for 127.0.0.1 at 2015-01-26 06:42:00 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by FeedbacksController#new as HTML
+  Rendered feedbacks/_form.html.erb (1414.8ms)
+  Rendered feedbacks/new.html.erb within layouts/application (1483.0ms)
+Completed 200 OK in 2465ms (Views: 2383.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/feedbacks" for 127.0.0.1 at 2015-01-26 06:44:49 +0200
+Processing by FeedbacksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wpn89/xC67jwG+60UrQjzZc+9Dcuj1T4Y/sPWMbBffQ=", "feedback"=>{"text"=>"hehhe"}, "commit"=>"Create Feedback"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (110.5ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-26 04:44:49.168982"], ["text", "hehhe"], ["updated_at", "2015-01-26 04:44:49.168982"]]
+  [1m[35m (117.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/feedbacks/14
+Completed 302 Found in 292ms (ActiveRecord: 228.4ms)
+
+
+Started GET "/feedbacks/14" for 127.0.0.1 at 2015-01-26 06:44:49 +0200
+Processing by FeedbacksController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mFeedback Load (0.2ms)[0m  [1mSELECT  "feedbacks".* FROM "feedbacks"  WHERE "feedbacks"."id" = ? LIMIT 1[0m  [["id", 14]]
+  Rendered feedbacks/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 139ms (Views: 136.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/feedbacks.css?body=1" for 127.0.0.1 at 2015-01-26 06:44:49 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-26 06:44:50 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-26 06:44:50 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-26 06:44:50 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-26 06:44:50 +0200
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2015-01-26 06:44:50 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-26 06:44:50 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-26 06:44:50 +0200
+
+
+Started GET "/feedbacks" for 127.0.0.1 at 2015-01-26 06:58:49 +0200
+Processing by FeedbacksController#index as HTML
+  [1m[35mFeedback Load (99.9ms)[0m  SELECT "feedbacks".* FROM "feedbacks"
+  Rendered feedbacks/index.html.erb within layouts/application (1460.4ms)
+Completed 200 OK in 8192ms (Views: 7659.1ms | ActiveRecord: 99.9ms)
+
+
+Started GET "/feedbacks/7/edit" for 127.0.0.1 at 2015-01-26 07:01:25 +0200
+Processing by FeedbacksController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mFeedback Load (4.8ms)[0m  [1mSELECT  "feedbacks".* FROM "feedbacks"  WHERE "feedbacks"."id" = ? LIMIT 1[0m  [["id", 7]]
+  Rendered feedbacks/_form.html.erb (4467.7ms)
+  Rendered feedbacks/edit.html.erb within layouts/application (4563.4ms)
+Completed 200 OK in 4673ms (Views: 4626.8ms | ActiveRecord: 4.8ms)
