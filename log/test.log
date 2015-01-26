@@ -94,3 +94,42 @@
   [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-26 00:44:33.306196"], ["text", "Good Job"], ["updated_at", "2015-01-26 00:44:33.306196"]]
   [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
   [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)  [["created_at", "2015-01-26 00:50:36.068050"], ["text", "Ea suscipit reprehenderit ut quia consequatur dolores et."], ["updated_at", "2015-01-26 00:50:36.068050"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-26 00:50:36.072862"], ["text", "Good Job"], ["updated_at", "2015-01-26 00:50:36.072862"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (16.3ms)[0m  INSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)  [["created_at", "2015-01-26 00:58:27.952724"], ["text", "Modi dolorem sed perspiciatis corporis aliquid sunt."], ["updated_at", "2015-01-26 00:58:27.952724"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-26 00:58:28.128626"], ["text", "Good Job"], ["updated_at", "2015-01-26 00:58:28.128626"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)  [["created_at", "2015-01-26 00:58:48.302748"], ["text", "Voluptates et aliquid veritatis eaque quia suscipit temporibus."], ["updated_at", "2015-01-26 00:58:48.302748"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-26 00:58:48.312023"], ["text", "Good Job"], ["updated_at", "2015-01-26 00:58:48.312023"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
