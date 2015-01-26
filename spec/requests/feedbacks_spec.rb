@@ -16,6 +16,9 @@ describe "Feedbacks" do
 				end 
 			end 
 
+		it "Updates an existing Feedback and displays the results" do
+			end 
+
 		it "Deletes a feedback" do 
 			feedback = create(:feedback, text: "Final Job")
 			visit feedbacks_path 
