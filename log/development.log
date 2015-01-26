@@ -2931,3 +2931,35 @@ Processing by FeedbacksController#index as HTML
   [1m[36mFeedback Load (0.1ms)[0m  [1mSELECT "feedbacks".* FROM "feedbacks"[0m
   Rendered feedbacks/index.html.erb within layouts/application (5.0ms)
 Completed 200 OK in 68ms (Views: 67.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/feedbacks" for 127.0.0.1 at 2015-01-26 02:10:19 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by FeedbacksController#index as HTML
+  [1m[35mFeedback Load (0.2ms)[0m  SELECT "feedbacks".* FROM "feedbacks"
+  Rendered feedbacks/index.html.erb within layouts/application (18.8ms)
+Completed 200 OK in 621ms (Views: 449.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/feedbacks.css?body=1" for 127.0.0.1 at 2015-01-26 02:10:20 +0200
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-01-26 02:10:20 +0200
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-01-26 02:10:20 +0200
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-01-26 02:10:20 +0200
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-01-26 02:10:20 +0200
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-01-26 02:10:20 +0200
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2015-01-26 02:10:20 +0200
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-01-26 02:10:20 +0200
