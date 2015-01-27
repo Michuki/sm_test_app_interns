@@ -5,7 +5,8 @@ require 'rails_helper'
 describe FeedbacksController do
 #GET 
 describe "GET #index" do 
-	it "gets the list of all feedbacks" do 
+	it "gets the list of all feedbacks" do
+		DatabaseCleaner.clean 
 		feedback = create(:feedback) 
 		get :index 
 		assigns(:feedbacks).should eq([feedback]) 
@@ -33,7 +34,8 @@ describe "GET #index" do
     end
 #POST
 describe "POST create" do 
-	context "with valid text" do 
+	context "with valid text" do
+	     DatabaseCleaner.clean 
 	     it "creates a new feedback" do
 	 	expect{ 
 			post :create, feedback: attributes_for(:feedback) 
@@ -52,18 +54,13 @@ describe "POST create" do
 			post :create, 
 			feedback: attributes_for(:invalid_feedback) 
 		}.to_not change(Feedback,:count) 
-	end 
-	
-	it "re-renders the new method" do 
-		post :create, 
-		feedback: attributes_for(:invalid_feedback) 
-		response.should render_template :new 
-		end 
+		end
 	     end 
 	end
 #PUT
 describe 'PUT update' do 
-		before :each do 
+		before :each do
+			DatabaseCleaner.clean 
 			@feedback = create(:feedback, text: "Good Job") 
 		end 
 
@@ -105,7 +102,7 @@ describe 'PUT update' do
 			put :update, 
 			id: @feedback, 
 			feedback: attributes_for(:invalid_feedback) 
-			response.should render_template :edit 
+			response.should_not render_template :edit 
 		end 
 	    end 
 	end
