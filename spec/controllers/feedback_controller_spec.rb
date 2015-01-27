@@ -109,6 +109,7 @@ describe 'PUT update' do
 #DELETE
 	describe 'DELETE destroy' do 
 		before :each do 
+			DatabaseCleaner.clean
 			@feedback = create(:feedback) 
 	    end 
 	

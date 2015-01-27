@@ -59,7 +59,8 @@ describe "POST create" do
 	end
 #PUT
 describe 'PUT update' do 
-		before :each do 
+		before :each do
+			DatabaseCleaner.clean 
 			@feedback = create(:feedback, text: "Good Job") 
 		end 
 
@@ -106,7 +107,8 @@ describe 'PUT update' do
 	    end 
 	end
 #DELETE
-	describe 'DELETE destroy' do 
+	describe 'DELETE destroy' do
+		DatabaseCleaner.clean 
 		before :each do 
 			@feedback = create(:feedback) 
 	    end 
