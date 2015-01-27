@@ -2494,3 +2494,1430 @@ Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
   [1m[35m (0.1ms)[0m  begin transaction
   [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-26 05:55:20.064283"], ["text", "Final Job"], ["updated_at", "2015-01-26 05:55:20.064283"]]
   [1m[35m (2.5ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-27 00:13:02.595837"], ["text", "Final Job"], ["updated_at", "2015-01-27 00:13:02.595837"]]
+  [1m[35m (4.5ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-27 00:15:15.479628"], ["text", "est"], ["updated_at", "2015-01-27 00:15:15.479628"]]
+  [1m[35m (2.1ms)[0m  commit transaction
+Processing by FeedbacksController#index as HTML
+  Rendered feedbacks/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 74ms (Views: 73.5ms | ActiveRecord: 0.0ms)
+  [1m[36mFeedback Load (0.3ms)[0m  [1mSELECT "feedbacks".* FROM "feedbacks"[0m
+Processing by FeedbacksController#index as HTML
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-27 00:15:15.591921"], ["text", "iure"], ["updated_at", "2015-01-27 00:15:15.591921"]]
+  [1m[35m (3.7ms)[0m  commit transaction
+Processing by FeedbacksController#show as HTML
+  Parameters: {"id"=>"56"}
+  [1m[36mFeedback Load (0.2ms)[0m  [1mSELECT  "feedbacks".* FROM "feedbacks"  WHERE "feedbacks"."id" = ? LIMIT 1[0m  [["id", 56]]
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-27 00:15:15.604281"], ["text", "dolorum"], ["updated_at", "2015-01-27 00:15:15.604281"]]
+  [1m[35m (4.2ms)[0m  commit transaction
+Processing by FeedbacksController#show as HTML
+  Parameters: {"id"=>"57"}
+  [1m[36mFeedback Load (0.1ms)[0m  [1mSELECT  "feedbacks".* FROM "feedbacks"  WHERE "feedbacks"."id" = ? LIMIT 1[0m  [["id", 57]]
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "feedbacks"
+Processing by FeedbacksController#create as HTML
+  Parameters: {"feedback"=>{"text"=>"distinctio"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)  [["created_at", "2015-01-27 00:15:15.617136"], ["text", "distinctio"], ["updated_at", "2015-01-27 00:15:15.617136"]]
+  [1m[36m (3.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://test.host/feedbacks/58
+Completed 302 Found in 7ms (ActiveRecord: 3.3ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "feedbacks"
+Processing by FeedbacksController#create as HTML
+  Parameters: {"feedback"=>{"text"=>"sapiente"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)  [["created_at", "2015-01-27 00:15:15.627248"], ["text", "sapiente"], ["updated_at", "2015-01-27 00:15:15.627248"]]
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://test.host/feedbacks/59
+Completed 302 Found in 4ms (ActiveRecord: 2.8ms)
+  [1m[35mFeedback Load (0.1ms)[0m  SELECT  "feedbacks".* FROM "feedbacks"   ORDER BY "feedbacks"."id" DESC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "feedbacks"[0m
+Processing by FeedbacksController#create as HTML
+  Parameters: {"feedback"=>{"text"=>nil}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-01-27 00:15:15.634939"], ["updated_at", "2015-01-27 00:15:15.634939"]]
+  [1m[35m (2.4ms)[0m  commit transaction
+Redirected to http://test.host/feedbacks/60
+Completed 302 Found in 4ms (ActiveRecord: 2.6ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "feedbacks"[0m
+Processing by FeedbacksController#create as HTML
+  Parameters: {"feedback"=>{"text"=>nil}}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2015-01-27 00:15:15.641584"], ["updated_at", "2015-01-27 00:15:15.641584"]]
+  [1m[35m (3.3ms)[0m  commit transaction
+Redirected to http://test.host/feedbacks/61
+Completed 302 Found in 5ms (ActiveRecord: 3.4ms)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)  [["created_at", "2015-01-27 00:15:15.647552"], ["text", "Good Job"], ["updated_at", "2015-01-27 00:15:15.647552"]]
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+Processing by FeedbacksController#update as HTML
+  Parameters: {"feedback"=>{"text"=>"amet"}, "id"=>"62"}
+  [1m[35mFeedback Load (0.1ms)[0m  SELECT  "feedbacks".* FROM "feedbacks"  WHERE "feedbacks"."id" = ? LIMIT 1  [["id", 62]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "feedbacks" SET "text" = ?, "updated_at" = ? WHERE "feedbacks"."id" = 62  [["text", "amet"], ["updated_at", "2015-01-27 00:15:15.655016"]]
+  [1m[36m (2.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://test.host/feedbacks/62
+Completed 302 Found in 6ms (ActiveRecord: 3.1ms)
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-27 00:15:15.662554"], ["text", "Good Job"], ["updated_at", "2015-01-27 00:15:15.662554"]]
+  [1m[35m (2.2ms)[0m  commit transaction
+Processing by FeedbacksController#update as HTML
+  Parameters: {"feedback"=>{"text"=>"Update Job"}, "id"=>"63"}
+  [1m[36mFeedback Load (0.1ms)[0m  [1mSELECT  "feedbacks".* FROM "feedbacks"  WHERE "feedbacks"."id" = ? LIMIT 1[0m  [["id", 63]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "feedbacks" SET "text" = ?, "updated_at" = ? WHERE "feedbacks"."id" = 63[0m  [["text", "Update Job"], ["updated_at", "2015-01-27 00:15:15.667695"]]
+  [1m[35m (3.2ms)[0m  commit transaction
+Redirected to http://test.host/feedbacks/63
+Completed 302 Found in 5ms (ActiveRecord: 3.4ms)
+  [1m[36mFeedback Load (0.1ms)[0m  [1mSELECT  "feedbacks".* FROM "feedbacks"  WHERE "feedbacks"."id" = ? LIMIT 1[0m  [["id", 63]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-27 00:15:15.673665"], ["text", "Good Job"], ["updated_at", "2015-01-27 00:15:15.673665"]]
+  [1m[35m (4.4ms)[0m  commit transaction
+Processing by FeedbacksController#update as HTML
+  Parameters: {"feedback"=>{"text"=>"ducimus"}, "id"=>"64"}
+  [1m[36mFeedback Load (0.1ms)[0m  [1mSELECT  "feedbacks".* FROM "feedbacks"  WHERE "feedbacks"."id" = ? LIMIT 1[0m  [["id", 64]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "feedbacks" SET "text" = ?, "updated_at" = ? WHERE "feedbacks"."id" = 64[0m  [["text", "ducimus"], ["updated_at", "2015-01-27 00:15:15.681165"]]
+  [1m[35m (2.1ms)[0m  commit transaction
+Redirected to http://test.host/feedbacks/64
+Completed 302 Found in 5ms (ActiveRecord: 2.4ms)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)  [["created_at", "2015-01-27 00:15:15.688344"], ["text", "Good Job"], ["updated_at", "2015-01-27 00:15:15.688344"]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+Processing by FeedbacksController#update as HTML
+  Parameters: {"feedback"=>{"text"=>nil}, "id"=>"65"}
+  [1m[35mFeedback Load (0.1ms)[0m  SELECT  "feedbacks".* FROM "feedbacks"  WHERE "feedbacks"."id" = ? LIMIT 1  [["id", 65]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "feedbacks" SET "text" = ?, "updated_at" = ? WHERE "feedbacks"."id" = 65  [["text", nil], ["updated_at", "2015-01-27 00:15:15.694265"]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://test.host/feedbacks/65
+Completed 302 Found in 4ms (ActiveRecord: 2.5ms)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-27 00:15:15.699143"], ["text", "Good Job"], ["updated_at", "2015-01-27 00:15:15.699143"]]
+  [1m[35m (2.1ms)[0m  commit transaction
+Processing by FeedbacksController#update as HTML
+  Parameters: {"feedback"=>{"text"=>nil}, "id"=>"66"}
+  [1m[36mFeedback Load (0.1ms)[0m  [1mSELECT  "feedbacks".* FROM "feedbacks"  WHERE "feedbacks"."id" = ? LIMIT 1[0m  [["id", 66]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "feedbacks" SET "text" = ?, "updated_at" = ? WHERE "feedbacks"."id" = 66[0m  [["text", nil], ["updated_at", "2015-01-27 00:15:15.704012"]]
+  [1m[35m (3.0ms)[0m  commit transaction
+Redirected to http://test.host/feedbacks/66
+Completed 302 Found in 5ms (ActiveRecord: 3.3ms)
+  [1m[36mFeedback Load (0.1ms)[0m  [1mSELECT  "feedbacks".* FROM "feedbacks"  WHERE "feedbacks"."id" = ? LIMIT 1[0m  [["id", 66]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-27 00:15:15.709680"], ["text", "Good Job"], ["updated_at", "2015-01-27 00:15:15.709680"]]
+  [1m[35m (1.9ms)[0m  commit transaction
+Processing by FeedbacksController#update as HTML
+  Parameters: {"feedback"=>{"text"=>nil}, "id"=>"67"}
+  [1m[36mFeedback Load (0.1ms)[0m  [1mSELECT  "feedbacks".* FROM "feedbacks"  WHERE "feedbacks"."id" = ? LIMIT 1[0m  [["id", 67]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "feedbacks" SET "text" = ?, "updated_at" = ? WHERE "feedbacks"."id" = 67[0m  [["text", nil], ["updated_at", "2015-01-27 00:15:15.714887"]]
+  [1m[35m (4.3ms)[0m  commit transaction
+Redirected to http://test.host/feedbacks/67
+Completed 302 Found in 7ms (ActiveRecord: 4.6ms)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)  [["created_at", "2015-01-27 00:15:15.722119"], ["text", "repellendus"], ["updated_at", "2015-01-27 00:15:15.722119"]]
+  [1m[36m (4.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "feedbacks"
+Processing by FeedbacksController#destroy as HTML
+  Parameters: {"id"=>"68"}
+  [1m[36mFeedback Load (0.1ms)[0m  [1mSELECT  "feedbacks".* FROM "feedbacks"  WHERE "feedbacks"."id" = ? LIMIT 1[0m  [["id", 68]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "feedbacks" WHERE "feedbacks"."id" = ?[0m  [["id", 68]]
+  [1m[35m (3.0ms)[0m  commit transaction
+Redirected to http://test.host/feedbacks
+Completed 302 Found in 5ms (ActiveRecord: 3.3ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "feedbacks"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-27 00:15:15.735235"], ["text", "dolore"], ["updated_at", "2015-01-27 00:15:15.735235"]]
+  [1m[35m (1.9ms)[0m  commit transaction
+Processing by FeedbacksController#destroy as HTML
+  Parameters: {"id"=>"69"}
+  [1m[36mFeedback Load (0.1ms)[0m  [1mSELECT  "feedbacks".* FROM "feedbacks"  WHERE "feedbacks"."id" = ? LIMIT 1[0m  [["id", 69]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "feedbacks" WHERE "feedbacks"."id" = ?[0m  [["id", 69]]
+  [1m[35m (2.6ms)[0m  commit transaction
+Redirected to http://test.host/feedbacks
+Completed 302 Found in 4ms (ActiveRecord: 2.8ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-27 00:28:15.974965"], ["text", "Final Job"], ["updated_at", "2015-01-27 00:28:15.974965"]]
+  [1m[35m (3.0ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (3.0ms)[0m  DELETE FROM "feedbacks";
+  [1m[36m (0.1ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (1.8ms)[0m  DELETE FROM sqlite_sequence where name = 'feedbacks';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)  [["created_at", "2015-01-27 00:34:09.996588"], ["text", "Final Job"], ["updated_at", "2015-01-27 00:34:09.996588"]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (13.2ms)[0m  DELETE FROM "feedbacks";
+  [1m[36m (0.2ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (2.3ms)[0m  DELETE FROM sqlite_sequence where name = 'feedbacks';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)  [["created_at", "2015-01-27 00:35:02.927816"], ["text", "Final Job"], ["updated_at", "2015-01-27 00:35:02.927816"]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (3.4ms)[0m  DELETE FROM "feedbacks";
+  [1m[36m (0.1ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (1.2ms)[0m  DELETE FROM sqlite_sequence where name = 'feedbacks';
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)  [["created_at", "2015-01-27 00:39:10.317259"], ["text", "Final Job"], ["updated_at", "2015-01-27 00:39:10.317259"]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/feedbacks" for 127.0.0.1 at 2015-01-27 02:41:40 +0200
+Processing by FeedbacksController#index as HTML
+  [1m[35mFeedback Load (0.1ms)[0m  SELECT "feedbacks".* FROM "feedbacks"
+  Rendered feedbacks/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 901ms (Views: 893.0ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "feedbacks"[0m
+Started GET "/feedbacks/new" for 127.0.0.1 at 2015-01-27 02:41:41 +0200
+Processing by FeedbacksController#new as HTML
+  Rendered feedbacks/_form.html.erb (214.8ms)
+  Rendered feedbacks/new.html.erb within layouts/application (252.6ms)
+Completed 200 OK in 256ms (Views: 255.4ms | ActiveRecord: 0.0ms)
+Started POST "/feedbacks" for 127.0.0.1 at 2015-01-27 02:41:41 +0200
+Processing by FeedbacksController#create as HTML
+  Parameters: {"utf8"=>"✓", "feedback"=>{"text"=>"Final Job"}, "commit"=>"Create Feedback"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-27 00:41:41.625619"], ["text", "Final Job"], ["updated_at", "2015-01-27 00:41:41.625619"]]
+  [1m[35m (3.2ms)[0m  commit transaction
+Redirected to http://www.example.com/feedbacks/2
+Completed 302 Found in 8ms (ActiveRecord: 3.5ms)
+Started GET "/feedbacks/2" for 127.0.0.1 at 2015-01-27 02:41:41 +0200
+Processing by FeedbacksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFeedback Load (0.1ms)[0m  [1mSELECT  "feedbacks".* FROM "feedbacks"  WHERE "feedbacks"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered feedbacks/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "feedbacks"
+  [1m[36m (3.3ms)[0m  [1mDELETE FROM "feedbacks";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (1.8ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'feedbacks';[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-27 00:41:41.648041"], ["text", "Final Job"], ["updated_at", "2015-01-27 00:41:41.648041"]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/feedbacks" for 127.0.0.1 at 2015-01-27 02:44:02 +0200
+Processing by FeedbacksController#index as HTML
+  [1m[35mFeedback Load (0.1ms)[0m  SELECT "feedbacks".* FROM "feedbacks"
+  Rendered feedbacks/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 307ms (Views: 299.3ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "feedbacks"[0m
+Started GET "/feedbacks/new" for 127.0.0.1 at 2015-01-27 02:44:03 +0200
+Processing by FeedbacksController#new as HTML
+  Rendered feedbacks/_form.html.erb (334.6ms)
+  Rendered feedbacks/new.html.erb within layouts/application (337.4ms)
+Completed 200 OK in 339ms (Views: 338.6ms | ActiveRecord: 0.0ms)
+Started POST "/feedbacks" for 127.0.0.1 at 2015-01-27 02:44:03 +0200
+Processing by FeedbacksController#create as HTML
+  Parameters: {"utf8"=>"✓", "feedback"=>{"text"=>"Final Job"}, "commit"=>"Create Feedback"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-27 00:44:03.400861"], ["text", "Final Job"], ["updated_at", "2015-01-27 00:44:03.400861"]]
+  [1m[35m (58.2ms)[0m  commit transaction
+Redirected to http://www.example.com/feedbacks/2
+Completed 302 Found in 62ms (ActiveRecord: 58.4ms)
+Started GET "/feedbacks/2" for 127.0.0.1 at 2015-01-27 02:44:03 +0200
+Processing by FeedbacksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFeedback Load (0.2ms)[0m  [1mSELECT  "feedbacks".* FROM "feedbacks"  WHERE "feedbacks"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered feedbacks/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "feedbacks"
+  [1m[36m (19.3ms)[0m  [1mDELETE FROM "feedbacks";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (1.5ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'feedbacks';[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-27 00:44:03.493980"], ["text", "Final Job"], ["updated_at", "2015-01-27 00:44:03.493980"]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/feedbacks" for 127.0.0.1 at 2015-01-27 02:45:49 +0200
+Processing by FeedbacksController#index as HTML
+  [1m[35mFeedback Load (0.1ms)[0m  SELECT "feedbacks".* FROM "feedbacks"
+  Rendered feedbacks/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 23ms (Views: 15.4ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "feedbacks"[0m
+Started GET "/feedbacks/new" for 127.0.0.1 at 2015-01-27 02:45:49 +0200
+Processing by FeedbacksController#new as HTML
+  Rendered feedbacks/_form.html.erb (207.8ms)
+  Rendered feedbacks/new.html.erb within layouts/application (210.5ms)
+Completed 200 OK in 212ms (Views: 211.5ms | ActiveRecord: 0.0ms)
+Started POST "/feedbacks" for 127.0.0.1 at 2015-01-27 02:45:49 +0200
+Processing by FeedbacksController#create as HTML
+  Parameters: {"utf8"=>"✓", "feedback"=>{"text"=>"Final Job"}, "commit"=>"Create Feedback"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-27 00:45:49.858320"], ["text", "Final Job"], ["updated_at", "2015-01-27 00:45:49.858320"]]
+  [1m[35m (7.1ms)[0m  commit transaction
+Redirected to http://www.example.com/feedbacks/2
+Completed 302 Found in 12ms (ActiveRecord: 7.4ms)
+Started GET "/feedbacks/2" for 127.0.0.1 at 2015-01-27 02:45:49 +0200
+Processing by FeedbacksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFeedback Load (0.2ms)[0m  [1mSELECT  "feedbacks".* FROM "feedbacks"  WHERE "feedbacks"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered feedbacks/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "feedbacks"
+  [1m[36m (2.6ms)[0m  [1mDELETE FROM "feedbacks";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (2.1ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'feedbacks';[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-27 00:45:49.883877"], ["text", "Final Job"], ["updated_at", "2015-01-27 00:45:49.883877"]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/feedbacks" for 127.0.0.1 at 2015-01-27 02:46:43 +0200
+Processing by FeedbacksController#index as HTML
+  [1m[35mFeedback Load (0.1ms)[0m  SELECT "feedbacks".* FROM "feedbacks"
+  Rendered feedbacks/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 24ms (Views: 16.2ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "feedbacks"[0m
+Started GET "/feedbacks/new" for 127.0.0.1 at 2015-01-27 02:46:43 +0200
+Processing by FeedbacksController#new as HTML
+  Rendered feedbacks/_form.html.erb (206.2ms)
+  Rendered feedbacks/new.html.erb within layouts/application (208.6ms)
+Completed 200 OK in 210ms (Views: 209.6ms | ActiveRecord: 0.0ms)
+Started POST "/feedbacks" for 127.0.0.1 at 2015-01-27 02:46:43 +0200
+Processing by FeedbacksController#create as HTML
+  Parameters: {"utf8"=>"✓", "feedback"=>{"text"=>"Final Job"}, "commit"=>"Create Feedback"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-27 00:46:43.595051"], ["text", "Final Job"], ["updated_at", "2015-01-27 00:46:43.595051"]]
+  [1m[35m (3.6ms)[0m  commit transaction
+Redirected to http://www.example.com/feedbacks/2
+Completed 302 Found in 8ms (ActiveRecord: 3.9ms)
+Started GET "/feedbacks/2" for 127.0.0.1 at 2015-01-27 02:46:43 +0200
+Processing by FeedbacksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFeedback Load (0.1ms)[0m  [1mSELECT  "feedbacks".* FROM "feedbacks"  WHERE "feedbacks"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered feedbacks/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "feedbacks"
+  [1m[36m (3.2ms)[0m  [1mDELETE FROM "feedbacks";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (1.3ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'feedbacks';[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-27 00:46:43.617467"], ["text", "Final Job"], ["updated_at", "2015-01-27 00:46:43.617467"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/feedbacks" for 127.0.0.1 at 2015-01-27 02:48:22 +0200
+Processing by FeedbacksController#index as HTML
+  [1m[35mFeedback Load (0.1ms)[0m  SELECT "feedbacks".* FROM "feedbacks"
+  Rendered feedbacks/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 23ms (Views: 15.6ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "feedbacks"[0m
+Started GET "/feedbacks/new" for 127.0.0.1 at 2015-01-27 02:48:22 +0200
+Processing by FeedbacksController#new as HTML
+  Rendered feedbacks/_form.html.erb (205.9ms)
+  Rendered feedbacks/new.html.erb within layouts/application (208.2ms)
+Completed 200 OK in 210ms (Views: 209.3ms | ActiveRecord: 0.0ms)
+Started POST "/feedbacks" for 127.0.0.1 at 2015-01-27 02:48:23 +0200
+Processing by FeedbacksController#create as HTML
+  Parameters: {"utf8"=>"✓", "feedback"=>{"text"=>"Final Job"}, "commit"=>"Create Feedback"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-27 00:48:23.095189"], ["text", "Final Job"], ["updated_at", "2015-01-27 00:48:23.095189"]]
+  [1m[35m (60.7ms)[0m  commit transaction
+Redirected to http://www.example.com/feedbacks/2
+Completed 302 Found in 65ms (ActiveRecord: 61.1ms)
+Started GET "/feedbacks/2" for 127.0.0.1 at 2015-01-27 02:48:23 +0200
+Processing by FeedbacksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFeedback Load (0.2ms)[0m  [1mSELECT  "feedbacks".* FROM "feedbacks"  WHERE "feedbacks"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered feedbacks/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "feedbacks"
+  [1m[36m (4.0ms)[0m  [1mDELETE FROM "feedbacks";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (3.2ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'feedbacks';[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-27 00:48:23.177084"], ["text", "Final Job"], ["updated_at", "2015-01-27 00:48:23.177084"]]
+  [1m[35m (2.7ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/feedbacks" for 127.0.0.1 at 2015-01-27 02:56:42 +0200
+Processing by FeedbacksController#index as HTML
+  [1m[35mFeedback Load (0.2ms)[0m  SELECT "feedbacks".* FROM "feedbacks"
+  Rendered feedbacks/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 28ms (Views: 18.8ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "feedbacks"[0m
+Started GET "/feedbacks/new" for 127.0.0.1 at 2015-01-27 02:56:42 +0200
+Processing by FeedbacksController#new as HTML
+  Rendered feedbacks/_form.html.erb (200.2ms)
+  Rendered feedbacks/new.html.erb within layouts/application (202.6ms)
+Completed 200 OK in 204ms (Views: 203.7ms | ActiveRecord: 0.0ms)
+Started POST "/feedbacks" for 127.0.0.1 at 2015-01-27 02:56:42 +0200
+Processing by FeedbacksController#create as HTML
+  Parameters: {"utf8"=>"✓", "feedback"=>{"text"=>"Final Job"}, "commit"=>"Create Feedback"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-27 00:56:42.394970"], ["text", "Final Job"], ["updated_at", "2015-01-27 00:56:42.394970"]]
+  [1m[35m (7.2ms)[0m  commit transaction
+Redirected to http://www.example.com/feedbacks/2
+Completed 302 Found in 12ms (ActiveRecord: 7.5ms)
+Started GET "/feedbacks/2" for 127.0.0.1 at 2015-01-27 02:56:42 +0200
+Processing by FeedbacksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFeedback Load (0.2ms)[0m  [1mSELECT  "feedbacks".* FROM "feedbacks"  WHERE "feedbacks"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered feedbacks/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "feedbacks"
+  [1m[36m (5.1ms)[0m  [1mDELETE FROM "feedbacks";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (5.1ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'feedbacks';[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-27 00:56:42.426691"], ["text", "Final Job"], ["updated_at", "2015-01-27 00:56:42.426691"]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/feedbacks" for 127.0.0.1 at 2015-01-27 02:59:45 +0200
+Processing by FeedbacksController#index as HTML
+  [1m[35mFeedback Load (0.2ms)[0m  SELECT "feedbacks".* FROM "feedbacks"
+  Rendered feedbacks/index.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 175ms (Views: 166.9ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "feedbacks"[0m
+Started GET "/feedbacks/new" for 127.0.0.1 at 2015-01-27 02:59:46 +0200
+Processing by FeedbacksController#new as HTML
+  Rendered feedbacks/_form.html.erb (280.8ms)
+  Rendered feedbacks/new.html.erb within layouts/application (283.5ms)
+Completed 200 OK in 285ms (Views: 284.5ms | ActiveRecord: 0.0ms)
+Started POST "/feedbacks" for 127.0.0.1 at 2015-01-27 02:59:46 +0200
+Processing by FeedbacksController#create as HTML
+  Parameters: {"utf8"=>"✓", "feedback"=>{"text"=>"Final Job"}, "commit"=>"Create Feedback"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-27 00:59:46.386641"], ["text", "Final Job"], ["updated_at", "2015-01-27 00:59:46.386641"]]
+  [1m[35m (5.9ms)[0m  commit transaction
+Redirected to http://www.example.com/feedbacks/2
+Completed 302 Found in 11ms (ActiveRecord: 6.3ms)
+Started GET "/feedbacks/2" for 127.0.0.1 at 2015-01-27 02:59:46 +0200
+Processing by FeedbacksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFeedback Load (0.4ms)[0m  [1mSELECT  "feedbacks".* FROM "feedbacks"  WHERE "feedbacks"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered feedbacks/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 5ms (Views: 2.0ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "feedbacks"
+  [1m[36m (2.7ms)[0m  [1mDELETE FROM "feedbacks";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (1.1ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'feedbacks';[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-27 00:59:46.412853"], ["text", "Final Job"], ["updated_at", "2015-01-27 00:59:46.412853"]]
+  [1m[35m (2.1ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/feedbacks" for 127.0.0.1 at 2015-01-27 03:01:05 +0200
+Processing by FeedbacksController#index as HTML
+  [1m[35mFeedback Load (0.2ms)[0m  SELECT "feedbacks".* FROM "feedbacks"
+  Rendered feedbacks/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 68ms (Views: 60.2ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "feedbacks"[0m
+Started GET "/feedbacks/new" for 127.0.0.1 at 2015-01-27 03:01:05 +0200
+Processing by FeedbacksController#new as HTML
+  Rendered feedbacks/_form.html.erb (197.6ms)
+  Rendered feedbacks/new.html.erb within layouts/application (200.1ms)
+Completed 200 OK in 202ms (Views: 201.1ms | ActiveRecord: 0.0ms)
+Started POST "/feedbacks" for 127.0.0.1 at 2015-01-27 03:01:05 +0200
+Processing by FeedbacksController#create as HTML
+  Parameters: {"utf8"=>"✓", "feedback"=>{"text"=>"Final Job"}, "commit"=>"Create Feedback"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-27 01:01:05.649732"], ["text", "Final Job"], ["updated_at", "2015-01-27 01:01:05.649732"]]
+  [1m[35m (3.3ms)[0m  commit transaction
+Redirected to http://www.example.com/feedbacks/2
+Completed 302 Found in 8ms (ActiveRecord: 3.7ms)
+Started GET "/feedbacks/2" for 127.0.0.1 at 2015-01-27 03:01:05 +0200
+Processing by FeedbacksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFeedback Load (0.2ms)[0m  [1mSELECT  "feedbacks".* FROM "feedbacks"  WHERE "feedbacks"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered feedbacks/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "feedbacks"
+  [1m[36m (2.5ms)[0m  [1mDELETE FROM "feedbacks";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (1.3ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'feedbacks';[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-27 01:01:05.673011"], ["text", "Final Job"], ["updated_at", "2015-01-27 01:01:05.673011"]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/feedbacks" for 127.0.0.1 at 2015-01-27 03:01:42 +0200
+Processing by FeedbacksController#index as HTML
+  [1m[35mFeedback Load (0.1ms)[0m  SELECT "feedbacks".* FROM "feedbacks"
+  Rendered feedbacks/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 26ms (Views: 17.2ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "feedbacks"[0m
+Started GET "/feedbacks/new" for 127.0.0.1 at 2015-01-27 03:01:42 +0200
+Processing by FeedbacksController#new as HTML
+  Rendered feedbacks/_form.html.erb (193.0ms)
+  Rendered feedbacks/new.html.erb within layouts/application (195.3ms)
+Completed 200 OK in 197ms (Views: 196.4ms | ActiveRecord: 0.0ms)
+Started POST "/feedbacks" for 127.0.0.1 at 2015-01-27 03:01:42 +0200
+Processing by FeedbacksController#create as HTML
+  Parameters: {"utf8"=>"✓", "feedback"=>{"text"=>"Final Job"}, "commit"=>"Create Feedback"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-27 01:01:42.309467"], ["text", "Final Job"], ["updated_at", "2015-01-27 01:01:42.309467"]]
+  [1m[35m (3.2ms)[0m  commit transaction
+Redirected to http://www.example.com/feedbacks/2
+Completed 302 Found in 8ms (ActiveRecord: 3.5ms)
+Started GET "/feedbacks/2" for 127.0.0.1 at 2015-01-27 03:01:42 +0200
+Processing by FeedbacksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFeedback Load (0.2ms)[0m  [1mSELECT  "feedbacks".* FROM "feedbacks"  WHERE "feedbacks"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered feedbacks/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "feedbacks"
+  [1m[36m (2.3ms)[0m  [1mDELETE FROM "feedbacks";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (2.5ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'feedbacks';[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-27 01:01:42.332264"], ["text", "Final Job"], ["updated_at", "2015-01-27 01:01:42.332264"]]
+  [1m[35m (2.7ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/feedbacks" for 127.0.0.1 at 2015-01-27 03:11:07 +0200
+Processing by FeedbacksController#index as HTML
+  [1m[35mFeedback Load (0.5ms)[0m  SELECT "feedbacks".* FROM "feedbacks"
+  Rendered feedbacks/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 27ms (Views: 18.6ms | ActiveRecord: 0.8ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "feedbacks"[0m
+Started GET "/feedbacks/new" for 127.0.0.1 at 2015-01-27 03:11:07 +0200
+Processing by FeedbacksController#new as HTML
+  Rendered feedbacks/_form.html.erb (208.6ms)
+  Rendered feedbacks/new.html.erb within layouts/application (211.1ms)
+Completed 200 OK in 213ms (Views: 212.4ms | ActiveRecord: 0.0ms)
+Started POST "/feedbacks" for 127.0.0.1 at 2015-01-27 03:11:07 +0200
+Processing by FeedbacksController#create as HTML
+  Parameters: {"utf8"=>"✓", "feedback"=>{"text"=>"Final Job"}, "commit"=>"Create Feedback"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-27 01:11:07.567133"], ["text", "Final Job"], ["updated_at", "2015-01-27 01:11:07.567133"]]
+  [1m[35m (2.7ms)[0m  commit transaction
+Redirected to http://www.example.com/feedbacks/2
+Completed 302 Found in 8ms (ActiveRecord: 3.0ms)
+Started GET "/feedbacks/2" for 127.0.0.1 at 2015-01-27 03:11:07 +0200
+Processing by FeedbacksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFeedback Load (0.2ms)[0m  [1mSELECT  "feedbacks".* FROM "feedbacks"  WHERE "feedbacks"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered feedbacks/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 5ms (Views: 2.2ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "feedbacks"
+  [1m[36m (4.0ms)[0m  [1mDELETE FROM "feedbacks";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (1.6ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'feedbacks';[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-27 01:11:07.591622"], ["text", "Final Job"], ["updated_at", "2015-01-27 01:11:07.591622"]]
+  [1m[35m (15.3ms)[0m  commit transaction
+Started GET "/feedbacks" for 127.0.0.1 at 2015-01-27 03:11:13 +0200
+Processing by FeedbacksController#index as HTML
+  [1m[36mFeedback Load (0.3ms)[0m  [1mSELECT "feedbacks".* FROM "feedbacks"[0m
+  Rendered feedbacks/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 12ms (Views: 4.5ms | ActiveRecord: 0.3ms)
+Started GET "/assets/application.css" for 127.0.0.1 at 2015-01-27 03:11:13 +0200
+Started GET "/assets/application.js" for 127.0.0.1 at 2015-01-27 03:11:13 +0200
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "feedbacks"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/feedbacks" for 127.0.0.1 at 2015-01-27 03:16:20 +0200
+Processing by FeedbacksController#index as HTML
+  [1m[35mFeedback Load (0.1ms)[0m  SELECT "feedbacks".* FROM "feedbacks"
+  Rendered feedbacks/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 27ms (Views: 18.6ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "feedbacks"[0m
+Started GET "/feedbacks/new" for 127.0.0.1 at 2015-01-27 03:16:20 +0200
+Processing by FeedbacksController#new as HTML
+  Rendered feedbacks/_form.html.erb (199.8ms)
+  Rendered feedbacks/new.html.erb within layouts/application (202.2ms)
+Completed 200 OK in 204ms (Views: 203.5ms | ActiveRecord: 0.0ms)
+Started POST "/feedbacks" for 127.0.0.1 at 2015-01-27 03:16:21 +0200
+Processing by FeedbacksController#create as HTML
+  Parameters: {"utf8"=>"✓", "feedback"=>{"text"=>"Final Job"}, "commit"=>"Create Feedback"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-27 01:16:21.126144"], ["text", "Final Job"], ["updated_at", "2015-01-27 01:16:21.126144"]]
+  [1m[35m (2.0ms)[0m  commit transaction
+Redirected to http://www.example.com/feedbacks/2
+Completed 302 Found in 29ms (ActiveRecord: 2.5ms)
+Started GET "/feedbacks/2" for 127.0.0.1 at 2015-01-27 03:16:21 +0200
+Processing by FeedbacksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFeedback Load (0.1ms)[0m  [1mSELECT  "feedbacks".* FROM "feedbacks"  WHERE "feedbacks"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered feedbacks/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 5ms (Views: 2.3ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "feedbacks"
+  [1m[36m (2.2ms)[0m  [1mDELETE FROM "feedbacks";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (3.3ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'feedbacks';[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-27 01:16:21.152539"], ["text", "Final Job"], ["updated_at", "2015-01-27 01:16:21.152539"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+Started GET "/feedbacks" for 127.0.0.1 at 2015-01-27 03:16:23 +0200
+Processing by FeedbacksController#index as HTML
+  [1m[36mFeedback Load (2.1ms)[0m  [1mSELECT "feedbacks".* FROM "feedbacks"[0m
+  Rendered feedbacks/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 8ms (Views: 4.8ms | ActiveRecord: 2.1ms)
+Started GET "/assets/application.css" for 127.0.0.1 at 2015-01-27 03:16:23 +0200
+Started GET "/assets/application.js" for 127.0.0.1 at 2015-01-27 03:16:23 +0200
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "feedbacks"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/feedbacks" for 127.0.0.1 at 2015-01-27 03:16:40 +0200
+Processing by FeedbacksController#index as HTML
+  [1m[35mFeedback Load (0.1ms)[0m  SELECT "feedbacks".* FROM "feedbacks"
+  Rendered feedbacks/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 27ms (Views: 17.3ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "feedbacks"[0m
+Started GET "/feedbacks/new" for 127.0.0.1 at 2015-01-27 03:16:40 +0200
+Processing by FeedbacksController#new as HTML
+  Rendered feedbacks/_form.html.erb (214.1ms)
+  Rendered feedbacks/new.html.erb within layouts/application (216.5ms)
+Completed 200 OK in 218ms (Views: 217.7ms | ActiveRecord: 0.0ms)
+Started POST "/feedbacks" for 127.0.0.1 at 2015-01-27 03:16:41 +0200
+Processing by FeedbacksController#create as HTML
+  Parameters: {"utf8"=>"✓", "feedback"=>{"text"=>"Final Job"}, "commit"=>"Create Feedback"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-27 01:16:41.208545"], ["text", "Final Job"], ["updated_at", "2015-01-27 01:16:41.208545"]]
+  [1m[35m (2.1ms)[0m  commit transaction
+Redirected to http://www.example.com/feedbacks/2
+Completed 302 Found in 10ms (ActiveRecord: 2.8ms)
+Started GET "/feedbacks/2" for 127.0.0.1 at 2015-01-27 03:16:41 +0200
+Processing by FeedbacksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFeedback Load (0.2ms)[0m  [1mSELECT  "feedbacks".* FROM "feedbacks"  WHERE "feedbacks"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered feedbacks/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 5ms (Views: 1.9ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "feedbacks"
+  [1m[36m (2.4ms)[0m  [1mDELETE FROM "feedbacks";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (1.8ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'feedbacks';[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-27 01:16:41.235972"], ["text", "Final Job"], ["updated_at", "2015-01-27 01:16:41.235972"]]
+  [1m[35m (2.1ms)[0m  commit transaction
+Started GET "/feedbacks" for 127.0.0.1 at 2015-01-27 03:16:43 +0200
+Processing by FeedbacksController#index as HTML
+  [1m[36mFeedback Load (0.4ms)[0m  [1mSELECT "feedbacks".* FROM "feedbacks"[0m
+  Rendered feedbacks/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.4ms)
+Started GET "/assets/application.css" for 127.0.0.1 at 2015-01-27 03:16:43 +0200
+Started GET "/assets/application.js" for 127.0.0.1 at 2015-01-27 03:16:43 +0200
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "feedbacks"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/feedbacks" for 127.0.0.1 at 2015-01-27 03:23:57 +0200
+Processing by FeedbacksController#index as HTML
+  [1m[35mFeedback Load (0.1ms)[0m  SELECT "feedbacks".* FROM "feedbacks"
+  Rendered feedbacks/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 27ms (Views: 18.0ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "feedbacks"[0m
+Started GET "/feedbacks/new" for 127.0.0.1 at 2015-01-27 03:23:57 +0200
+Processing by FeedbacksController#new as HTML
+  Rendered feedbacks/_form.html.erb (208.5ms)
+  Rendered feedbacks/new.html.erb within layouts/application (210.8ms)
+Completed 200 OK in 212ms (Views: 211.8ms | ActiveRecord: 0.0ms)
+Started POST "/feedbacks" for 127.0.0.1 at 2015-01-27 03:23:57 +0200
+Processing by FeedbacksController#create as HTML
+  Parameters: {"utf8"=>"✓", "feedback"=>{"text"=>"Final Job"}, "commit"=>"Create Feedback"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-27 01:23:57.906493"], ["text", "Final Job"], ["updated_at", "2015-01-27 01:23:57.906493"]]
+  [1m[35m (24.2ms)[0m  commit transaction
+Redirected to http://www.example.com/feedbacks/2
+Completed 302 Found in 30ms (ActiveRecord: 24.6ms)
+Started GET "/feedbacks/2" for 127.0.0.1 at 2015-01-27 03:23:57 +0200
+Processing by FeedbacksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFeedback Load (0.2ms)[0m  [1mSELECT  "feedbacks".* FROM "feedbacks"  WHERE "feedbacks"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered feedbacks/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "feedbacks"
+  [1m[36m (3.3ms)[0m  [1mDELETE FROM "feedbacks";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (1.4ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'feedbacks';[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-27 01:23:57.952345"], ["text", "Final Job"], ["updated_at", "2015-01-27 01:23:57.952345"]]
+  [1m[35m (1.9ms)[0m  commit transaction
+Started GET "/feedbacks" for 127.0.0.1 at 2015-01-27 03:23:57 +0200
+Processing by FeedbacksController#index as HTML
+  [1m[36mFeedback Load (0.1ms)[0m  [1mSELECT "feedbacks".* FROM "feedbacks"[0m
+  Rendered feedbacks/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "feedbacks"
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/feedbacks" for 127.0.0.1 at 2015-01-27 03:39:42 +0200
+Processing by FeedbacksController#index as HTML
+  [1m[35mFeedback Load (0.2ms)[0m  SELECT "feedbacks".* FROM "feedbacks"
+  Rendered feedbacks/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 30ms (Views: 20.4ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "feedbacks"[0m
+Started GET "/feedbacks/new" for 127.0.0.1 at 2015-01-27 03:39:42 +0200
+Processing by FeedbacksController#new as HTML
+  Rendered feedbacks/_form.html.erb (209.6ms)
+  Rendered feedbacks/new.html.erb within layouts/application (212.9ms)
+Completed 200 OK in 215ms (Views: 214.3ms | ActiveRecord: 0.0ms)
+Started POST "/feedbacks" for 127.0.0.1 at 2015-01-27 03:39:42 +0200
+Processing by FeedbacksController#create as HTML
+  Parameters: {"utf8"=>"✓", "feedback"=>{"text"=>"Final Job"}, "commit"=>"Create Feedback"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-27 01:39:42.587108"], ["text", "Final Job"], ["updated_at", "2015-01-27 01:39:42.587108"]]
+  [1m[35m (229.5ms)[0m  commit transaction
+Redirected to http://www.example.com/feedbacks/2
+Completed 302 Found in 235ms (ActiveRecord: 229.9ms)
+Started GET "/feedbacks/2" for 127.0.0.1 at 2015-01-27 03:39:42 +0200
+Processing by FeedbacksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFeedback Load (0.2ms)[0m  [1mSELECT  "feedbacks".* FROM "feedbacks"  WHERE "feedbacks"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered feedbacks/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "feedbacks"
+  [1m[36m (145.9ms)[0m  [1mDELETE FROM "feedbacks";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (503.5ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'feedbacks';[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-27 01:39:43.482485"], ["text", "Final Job"], ["updated_at", "2015-01-27 01:39:43.482485"]]
+  [1m[35m (513.7ms)[0m  commit transaction
+Started GET "/feedbacks" for 127.0.0.1 at 2015-01-27 03:39:43 +0200
+Processing by FeedbacksController#index as HTML
+  [1m[36mFeedback Load (0.1ms)[0m  [1mSELECT "feedbacks".* FROM "feedbacks"[0m
+  Rendered feedbacks/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "feedbacks"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/feedbacks" for 127.0.0.1 at 2015-01-27 03:40:54 +0200
+Processing by FeedbacksController#index as HTML
+  [1m[35mFeedback Load (0.1ms)[0m  SELECT "feedbacks".* FROM "feedbacks"
+  Rendered feedbacks/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 26ms (Views: 17.5ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "feedbacks"[0m
+Started GET "/feedbacks/new" for 127.0.0.1 at 2015-01-27 03:40:54 +0200
+Processing by FeedbacksController#new as HTML
+  Rendered feedbacks/_form.html.erb (209.1ms)
+  Rendered feedbacks/new.html.erb within layouts/application (213.0ms)
+Completed 200 OK in 216ms (Views: 215.1ms | ActiveRecord: 0.0ms)
+Started POST "/feedbacks" for 127.0.0.1 at 2015-01-27 03:40:54 +0200
+Processing by FeedbacksController#create as HTML
+  Parameters: {"utf8"=>"✓", "feedback"=>{"text"=>"Final Job"}, "commit"=>"Create Feedback"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-27 01:40:55.001419"], ["text", "Final Job"], ["updated_at", "2015-01-27 01:40:55.001419"]]
+  [1m[35m (4.1ms)[0m  commit transaction
+Redirected to http://www.example.com/feedbacks/2
+Completed 302 Found in 10ms (ActiveRecord: 4.4ms)
+Started GET "/feedbacks/2" for 127.0.0.1 at 2015-01-27 03:40:55 +0200
+Processing by FeedbacksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFeedback Load (0.2ms)[0m  [1mSELECT  "feedbacks".* FROM "feedbacks"  WHERE "feedbacks"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered feedbacks/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 4ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "feedbacks"
+  [1m[36m (3.7ms)[0m  [1mDELETE FROM "feedbacks";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (2.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'feedbacks';[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-27 01:40:55.026878"], ["text", "Final Job"], ["updated_at", "2015-01-27 01:40:55.026878"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+Started GET "/feedbacks" for 127.0.0.1 at 2015-01-27 03:40:55 +0200
+Processing by FeedbacksController#index as HTML
+  [1m[36mFeedback Load (0.1ms)[0m  [1mSELECT "feedbacks".* FROM "feedbacks"[0m
+  Rendered feedbacks/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "feedbacks"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/feedbacks" for 127.0.0.1 at 2015-01-27 03:41:27 +0200
+Processing by FeedbacksController#index as HTML
+  [1m[35mFeedback Load (0.1ms)[0m  SELECT "feedbacks".* FROM "feedbacks"
+  Rendered feedbacks/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 30ms (Views: 22.0ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "feedbacks"[0m
+Started GET "/feedbacks/new" for 127.0.0.1 at 2015-01-27 03:41:27 +0200
+Processing by FeedbacksController#new as HTML
+  Rendered feedbacks/_form.html.erb (198.2ms)
+  Rendered feedbacks/new.html.erb within layouts/application (200.7ms)
+Completed 200 OK in 202ms (Views: 201.8ms | ActiveRecord: 0.0ms)
+Started POST "/feedbacks" for 127.0.0.1 at 2015-01-27 03:41:28 +0200
+Processing by FeedbacksController#create as HTML
+  Parameters: {"utf8"=>"✓", "feedback"=>{"text"=>"Final Job"}, "commit"=>"Create Feedback"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-27 01:41:28.208225"], ["text", "Final Job"], ["updated_at", "2015-01-27 01:41:28.208225"]]
+  [1m[35m (2.8ms)[0m  commit transaction
+Redirected to http://www.example.com/feedbacks/2
+Completed 302 Found in 9ms (ActiveRecord: 3.3ms)
+Started GET "/feedbacks/2" for 127.0.0.1 at 2015-01-27 03:41:28 +0200
+Processing by FeedbacksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFeedback Load (0.2ms)[0m  [1mSELECT  "feedbacks".* FROM "feedbacks"  WHERE "feedbacks"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered feedbacks/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "feedbacks"
+  [1m[36m (2.1ms)[0m  [1mDELETE FROM "feedbacks";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (1.8ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'feedbacks';[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-27 01:41:28.232053"], ["text", "Final Job"], ["updated_at", "2015-01-27 01:41:28.232053"]]
+  [1m[35m (3.2ms)[0m  commit transaction
+Started GET "/feedbacks" for 127.0.0.1 at 2015-01-27 03:41:28 +0200
+Processing by FeedbacksController#index as HTML
+  [1m[36mFeedback Load (0.1ms)[0m  [1mSELECT "feedbacks".* FROM "feedbacks"[0m
+  Rendered feedbacks/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "feedbacks"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/feedbacks" for 127.0.0.1 at 2015-01-27 03:41:46 +0200
+Processing by FeedbacksController#index as HTML
+  [1m[35mFeedback Load (0.2ms)[0m  SELECT "feedbacks".* FROM "feedbacks"
+  Rendered feedbacks/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 27ms (Views: 18.3ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "feedbacks"[0m
+Started GET "/feedbacks/new" for 127.0.0.1 at 2015-01-27 03:41:46 +0200
+Processing by FeedbacksController#new as HTML
+  Rendered feedbacks/_form.html.erb (204.4ms)
+  Rendered feedbacks/new.html.erb within layouts/application (206.9ms)
+Completed 200 OK in 209ms (Views: 208.0ms | ActiveRecord: 0.0ms)
+Started POST "/feedbacks" for 127.0.0.1 at 2015-01-27 03:41:46 +0200
+Processing by FeedbacksController#create as HTML
+  Parameters: {"utf8"=>"✓", "feedback"=>{"text"=>"Final Job"}, "commit"=>"Create Feedback"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-27 01:41:46.545528"], ["text", "Final Job"], ["updated_at", "2015-01-27 01:41:46.545528"]]
+  [1m[35m (48.9ms)[0m  commit transaction
+Redirected to http://www.example.com/feedbacks/2
+Completed 302 Found in 54ms (ActiveRecord: 49.3ms)
+Started GET "/feedbacks/2" for 127.0.0.1 at 2015-01-27 03:41:46 +0200
+Processing by FeedbacksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFeedback Load (0.3ms)[0m  [1mSELECT  "feedbacks".* FROM "feedbacks"  WHERE "feedbacks"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered feedbacks/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 7ms (Views: 3.2ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "feedbacks"
+  [1m[36m (3.0ms)[0m  [1mDELETE FROM "feedbacks";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (2.3ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'feedbacks';[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-27 01:41:46.620126"], ["text", "Final Job"], ["updated_at", "2015-01-27 01:41:46.620126"]]
+  [1m[35m (2.1ms)[0m  commit transaction
+Started GET "/feedbacks" for 127.0.0.1 at 2015-01-27 03:41:46 +0200
+Processing by FeedbacksController#index as HTML
+  [1m[36mFeedback Load (0.2ms)[0m  [1mSELECT "feedbacks".* FROM "feedbacks"[0m
+  Rendered feedbacks/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "feedbacks"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/feedbacks" for 127.0.0.1 at 2015-01-27 03:52:47 +0200
+Processing by FeedbacksController#index as HTML
+  [1m[35mFeedback Load (0.2ms)[0m  SELECT "feedbacks".* FROM "feedbacks"
+  Rendered feedbacks/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 31ms (Views: 22.5ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "feedbacks"[0m
+Started GET "/feedbacks/new" for 127.0.0.1 at 2015-01-27 03:52:47 +0200
+Processing by FeedbacksController#new as HTML
+  Rendered feedbacks/_form.html.erb (203.2ms)
+  Rendered feedbacks/new.html.erb within layouts/application (207.6ms)
+Completed 200 OK in 210ms (Views: 208.9ms | ActiveRecord: 0.0ms)
+Started POST "/feedbacks" for 127.0.0.1 at 2015-01-27 03:52:47 +0200
+Processing by FeedbacksController#create as HTML
+  Parameters: {"utf8"=>"✓", "feedback"=>{"text"=>"Final Job"}, "commit"=>"Create Feedback"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-27 01:52:47.958759"], ["text", "Final Job"], ["updated_at", "2015-01-27 01:52:47.958759"]]
+  [1m[35m (2.9ms)[0m  commit transaction
+Redirected to http://www.example.com/feedbacks/2
+Completed 302 Found in 8ms (ActiveRecord: 3.2ms)
+Started GET "/feedbacks/2" for 127.0.0.1 at 2015-01-27 03:52:47 +0200
+Processing by FeedbacksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFeedback Load (0.2ms)[0m  [1mSELECT  "feedbacks".* FROM "feedbacks"  WHERE "feedbacks"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered feedbacks/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "feedbacks"
+  [1m[36m (2.8ms)[0m  [1mDELETE FROM "feedbacks";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (2.8ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'feedbacks';[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-27 01:52:47.984166"], ["text", "Final Job"], ["updated_at", "2015-01-27 01:52:47.984166"]]
+  [1m[35m (2.5ms)[0m  commit transaction
+Started GET "/feedbacks" for 127.0.0.1 at 2015-01-27 03:52:47 +0200
+Processing by FeedbacksController#index as HTML
+  [1m[36mFeedback Load (0.1ms)[0m  [1mSELECT "feedbacks".* FROM "feedbacks"[0m
+  Rendered feedbacks/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "feedbacks"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/feedbacks" for 127.0.0.1 at 2015-01-27 03:53:35 +0200
+Processing by FeedbacksController#index as HTML
+  [1m[35mFeedback Load (0.1ms)[0m  SELECT "feedbacks".* FROM "feedbacks"
+  Rendered feedbacks/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 26ms (Views: 17.3ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "feedbacks"[0m
+Started GET "/feedbacks/new" for 127.0.0.1 at 2015-01-27 03:53:35 +0200
+Processing by FeedbacksController#new as HTML
+  Rendered feedbacks/_form.html.erb (201.2ms)
+  Rendered feedbacks/new.html.erb within layouts/application (205.1ms)
+Completed 200 OK in 207ms (Views: 206.3ms | ActiveRecord: 0.0ms)
+Started POST "/feedbacks" for 127.0.0.1 at 2015-01-27 03:53:35 +0200
+Processing by FeedbacksController#create as HTML
+  Parameters: {"utf8"=>"✓", "feedback"=>{"text"=>"Final Job"}, "commit"=>"Create Feedback"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-27 01:53:35.936214"], ["text", "Final Job"], ["updated_at", "2015-01-27 01:53:35.936214"]]
+  [1m[35m (6.8ms)[0m  commit transaction
+Redirected to http://www.example.com/feedbacks/2
+Completed 302 Found in 12ms (ActiveRecord: 7.1ms)
+Started GET "/feedbacks/2" for 127.0.0.1 at 2015-01-27 03:53:35 +0200
+Processing by FeedbacksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFeedback Load (0.2ms)[0m  [1mSELECT  "feedbacks".* FROM "feedbacks"  WHERE "feedbacks"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered feedbacks/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "feedbacks"
+  [1m[36m (2.6ms)[0m  [1mDELETE FROM "feedbacks";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (2.7ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'feedbacks';[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-27 01:53:35.964186"], ["text", "Final Job"], ["updated_at", "2015-01-27 01:53:35.964186"]]
+  [1m[35m (2.6ms)[0m  commit transaction
+Started GET "/feedbacks" for 127.0.0.1 at 2015-01-27 03:53:35 +0200
+Processing by FeedbacksController#index as HTML
+  [1m[36mFeedback Load (0.1ms)[0m  [1mSELECT "feedbacks".* FROM "feedbacks"[0m
+  Rendered feedbacks/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "feedbacks"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/feedbacks" for 127.0.0.1 at 2015-01-27 04:02:28 +0200
+Processing by FeedbacksController#index as HTML
+  [1m[35mFeedback Load (0.1ms)[0m  SELECT "feedbacks".* FROM "feedbacks"
+  Rendered feedbacks/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 30ms (Views: 20.2ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "feedbacks"[0m
+Started GET "/feedbacks/new" for 127.0.0.1 at 2015-01-27 04:02:28 +0200
+Processing by FeedbacksController#new as HTML
+  Rendered feedbacks/_form.html.erb (210.0ms)
+  Rendered feedbacks/new.html.erb within layouts/application (212.6ms)
+Completed 200 OK in 214ms (Views: 213.6ms | ActiveRecord: 0.0ms)
+Started POST "/feedbacks" for 127.0.0.1 at 2015-01-27 04:02:28 +0200
+Processing by FeedbacksController#create as HTML
+  Parameters: {"utf8"=>"✓", "feedback"=>{"text"=>"Final Job"}, "commit"=>"Create Feedback"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-27 02:02:28.458620"], ["text", "Final Job"], ["updated_at", "2015-01-27 02:02:28.458620"]]
+  [1m[35m (1.9ms)[0m  commit transaction
+Redirected to http://www.example.com/feedbacks/2
+Completed 302 Found in 8ms (ActiveRecord: 2.4ms)
+Started GET "/feedbacks/2" for 127.0.0.1 at 2015-01-27 04:02:28 +0200
+Processing by FeedbacksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFeedback Load (0.2ms)[0m  [1mSELECT  "feedbacks".* FROM "feedbacks"  WHERE "feedbacks"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered feedbacks/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 5ms (Views: 1.9ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "feedbacks"
+  [1m[36m (2.9ms)[0m  [1mDELETE FROM "feedbacks";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (2.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'feedbacks';[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-27 02:02:28.484457"], ["text", "Final Job"], ["updated_at", "2015-01-27 02:02:28.484457"]]
+  [1m[35m (2.1ms)[0m  commit transaction
+Started GET "/feedbacks" for 127.0.0.1 at 2015-01-27 04:02:28 +0200
+Processing by FeedbacksController#index as HTML
+  [1m[36mFeedback Load (0.1ms)[0m  [1mSELECT "feedbacks".* FROM "feedbacks"[0m
+  Rendered feedbacks/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "feedbacks"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "feedbacks"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/feedbacks" for 127.0.0.1 at 2015-01-27 04:02:55 +0200
+Processing by FeedbacksController#index as HTML
+  [1m[35mFeedback Load (0.1ms)[0m  SELECT "feedbacks".* FROM "feedbacks"
+  Rendered feedbacks/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 25ms (Views: 16.8ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "feedbacks"[0m
+Started GET "/feedbacks/new" for 127.0.0.1 at 2015-01-27 04:02:55 +0200
+Processing by FeedbacksController#new as HTML
+  Rendered feedbacks/_form.html.erb (192.8ms)
+  Rendered feedbacks/new.html.erb within layouts/application (195.2ms)
+Completed 200 OK in 197ms (Views: 196.2ms | ActiveRecord: 0.0ms)
+Started POST "/feedbacks" for 127.0.0.1 at 2015-01-27 04:02:56 +0200
+Processing by FeedbacksController#create as HTML
+  Parameters: {"utf8"=>"✓", "feedback"=>{"text"=>"Final Job"}, "commit"=>"Create Feedback"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-27 02:02:56.180471"], ["text", "Final Job"], ["updated_at", "2015-01-27 02:02:56.180471"]]
+  [1m[35m (3.7ms)[0m  commit transaction
+Redirected to http://www.example.com/feedbacks/2
+Completed 302 Found in 9ms (ActiveRecord: 3.9ms)
+Started GET "/feedbacks/2" for 127.0.0.1 at 2015-01-27 04:02:56 +0200
+Processing by FeedbacksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFeedback Load (0.2ms)[0m  [1mSELECT  "feedbacks".* FROM "feedbacks"  WHERE "feedbacks"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered feedbacks/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "feedbacks"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)  [["created_at", "2015-01-27 02:02:56.198793"], ["text", "Final Job"], ["updated_at", "2015-01-27 02:02:56.198793"]]
+  [1m[36m (3.0ms)[0m  [1mcommit transaction[0m
+Started GET "/feedbacks" for 127.0.0.1 at 2015-01-27 04:02:56 +0200
+Processing by FeedbacksController#index as HTML
+  [1m[35mFeedback Load (0.2ms)[0m  SELECT "feedbacks".* FROM "feedbacks"
+  Rendered feedbacks/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "feedbacks"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "feedbacks"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/feedbacks" for 127.0.0.1 at 2015-01-27 04:03:55 +0200
+Processing by FeedbacksController#index as HTML
+  [1m[35mFeedback Load (0.1ms)[0m  SELECT "feedbacks".* FROM "feedbacks"
+  Rendered feedbacks/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 28ms (Views: 19.0ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "feedbacks"[0m
+Started GET "/feedbacks/new" for 127.0.0.1 at 2015-01-27 04:03:55 +0200
+Processing by FeedbacksController#new as HTML
+  Rendered feedbacks/_form.html.erb (204.4ms)
+  Rendered feedbacks/new.html.erb within layouts/application (207.0ms)
+Completed 200 OK in 209ms (Views: 208.0ms | ActiveRecord: 0.0ms)
+Started POST "/feedbacks" for 127.0.0.1 at 2015-01-27 04:03:55 +0200
+Processing by FeedbacksController#create as HTML
+  Parameters: {"utf8"=>"✓", "feedback"=>{"text"=>"Final Job"}, "commit"=>"Create Feedback"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-27 02:03:55.405945"], ["text", "Final Job"], ["updated_at", "2015-01-27 02:03:55.405945"]]
+  [1m[35m (2.7ms)[0m  commit transaction
+Redirected to http://www.example.com/feedbacks/4
+Completed 302 Found in 8ms (ActiveRecord: 3.0ms)
+Started GET "/feedbacks/4" for 127.0.0.1 at 2015-01-27 04:03:55 +0200
+Processing by FeedbacksController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mFeedback Load (0.2ms)[0m  [1mSELECT  "feedbacks".* FROM "feedbacks"  WHERE "feedbacks"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered feedbacks/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 5ms (Views: 2.0ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "feedbacks"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)  [["created_at", "2015-01-27 02:03:55.427061"], ["text", "Final Job"], ["updated_at", "2015-01-27 02:03:55.427061"]]
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+Started GET "/feedbacks" for 127.0.0.1 at 2015-01-27 04:03:55 +0200
+Processing by FeedbacksController#index as HTML
+  [1m[35mFeedback Load (0.3ms)[0m  SELECT "feedbacks".* FROM "feedbacks"
+  Rendered feedbacks/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "feedbacks"[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "feedbacks"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/feedbacks" for 127.0.0.1 at 2015-01-27 04:04:35 +0200
+Processing by FeedbacksController#index as HTML
+  [1m[35mFeedback Load (0.2ms)[0m  SELECT "feedbacks".* FROM "feedbacks"
+  Rendered feedbacks/index.html.erb within layouts/application (37.3ms)
+Completed 200 OK in 58ms (Views: 49.9ms | ActiveRecord: 0.6ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "feedbacks"[0m
+Started GET "/feedbacks/new" for 127.0.0.1 at 2015-01-27 04:04:35 +0200
+Processing by FeedbacksController#new as HTML
+  Rendered feedbacks/_form.html.erb (206.1ms)
+  Rendered feedbacks/new.html.erb within layouts/application (208.7ms)
+Completed 200 OK in 210ms (Views: 209.8ms | ActiveRecord: 0.0ms)
+Started POST "/feedbacks" for 127.0.0.1 at 2015-01-27 04:04:35 +0200
+Processing by FeedbacksController#create as HTML
+  Parameters: {"utf8"=>"✓", "feedback"=>{"text"=>"Final Job"}, "commit"=>"Create Feedback"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-27 02:04:35.991218"], ["text", "Final Job"], ["updated_at", "2015-01-27 02:04:35.991218"]]
+  [1m[35m (2.6ms)[0m  commit transaction
+Redirected to http://www.example.com/feedbacks/6
+Completed 302 Found in 8ms (ActiveRecord: 3.0ms)
+Started GET "/feedbacks/6" for 127.0.0.1 at 2015-01-27 04:04:35 +0200
+Processing by FeedbacksController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mFeedback Load (0.2ms)[0m  [1mSELECT  "feedbacks".* FROM "feedbacks"  WHERE "feedbacks"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered feedbacks/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "feedbacks"
+  [1m[36m (3.0ms)[0m  [1mDELETE FROM "feedbacks";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (3.1ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'feedbacks';[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-27 02:04:36.016458"], ["text", "Final Job"], ["updated_at", "2015-01-27 02:04:36.016458"]]
+  [1m[35m (2.2ms)[0m  commit transaction
+Started GET "/feedbacks" for 127.0.0.1 at 2015-01-27 04:04:36 +0200
+Processing by FeedbacksController#index as HTML
+  [1m[36mFeedback Load (0.2ms)[0m  [1mSELECT "feedbacks".* FROM "feedbacks"[0m
+  Rendered feedbacks/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "feedbacks"
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "feedbacks"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/feedbacks" for 127.0.0.1 at 2015-01-27 04:06:44 +0200
+Processing by FeedbacksController#index as HTML
+  [1m[35mFeedback Load (0.1ms)[0m  SELECT "feedbacks".* FROM "feedbacks"
+  Rendered feedbacks/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 27ms (Views: 17.8ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "feedbacks"[0m
+Started GET "/feedbacks/new" for 127.0.0.1 at 2015-01-27 04:06:45 +0200
+Processing by FeedbacksController#new as HTML
+  Rendered feedbacks/_form.html.erb (208.9ms)
+  Rendered feedbacks/new.html.erb within layouts/application (211.3ms)
+Completed 200 OK in 213ms (Views: 212.5ms | ActiveRecord: 0.0ms)
+Started POST "/feedbacks" for 127.0.0.1 at 2015-01-27 04:06:45 +0200
+Processing by FeedbacksController#create as HTML
+  Parameters: {"utf8"=>"✓", "feedback"=>{"text"=>"Final Job"}, "commit"=>"Create Feedback"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-27 02:06:45.229835"], ["text", "Final Job"], ["updated_at", "2015-01-27 02:06:45.229835"]]
+  [1m[35m (3.3ms)[0m  commit transaction
+Redirected to http://www.example.com/feedbacks/2
+Completed 302 Found in 11ms (ActiveRecord: 3.9ms)
+Started GET "/feedbacks/2" for 127.0.0.1 at 2015-01-27 04:06:45 +0200
+Processing by FeedbacksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFeedback Load (0.2ms)[0m  [1mSELECT  "feedbacks".* FROM "feedbacks"  WHERE "feedbacks"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered feedbacks/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 5ms (Views: 1.8ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "feedbacks"
+  [1m[36m (3.0ms)[0m  [1mDELETE FROM "feedbacks";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (1.2ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'feedbacks';[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-27 02:06:45.256794"], ["text", "Final Job"], ["updated_at", "2015-01-27 02:06:45.256794"]]
+  [1m[35m (4.2ms)[0m  commit transaction
+Started GET "/feedbacks" for 127.0.0.1 at 2015-01-27 04:06:48 +0200
+Processing by FeedbacksController#index as HTML
+  [1m[36mFeedback Load (0.3ms)[0m  [1mSELECT "feedbacks".* FROM "feedbacks"[0m
+  Rendered feedbacks/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms)
+Started GET "/assets/application.css" for 127.0.0.1 at 2015-01-27 04:06:48 +0200
+Started GET "/assets/application.js" for 127.0.0.1 at 2015-01-27 04:06:48 +0200
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "feedbacks"
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/feedbacks" for 127.0.0.1 at 2015-01-27 04:07:36 +0200
+Processing by FeedbacksController#index as HTML
+  [1m[35mFeedback Load (0.1ms)[0m  SELECT "feedbacks".* FROM "feedbacks"
+  Rendered feedbacks/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 27ms (Views: 18.2ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "feedbacks"[0m
+Started GET "/feedbacks/new" for 127.0.0.1 at 2015-01-27 04:07:36 +0200
+Processing by FeedbacksController#new as HTML
+  Rendered feedbacks/_form.html.erb (213.5ms)
+  Rendered feedbacks/new.html.erb within layouts/application (216.5ms)
+Completed 200 OK in 218ms (Views: 217.6ms | ActiveRecord: 0.0ms)
+Started POST "/feedbacks" for 127.0.0.1 at 2015-01-27 04:07:37 +0200
+Processing by FeedbacksController#create as HTML
+  Parameters: {"utf8"=>"✓", "feedback"=>{"text"=>"Final Job"}, "commit"=>"Create Feedback"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-27 02:07:37.022809"], ["text", "Final Job"], ["updated_at", "2015-01-27 02:07:37.022809"]]
+  [1m[35m (2.4ms)[0m  commit transaction
+Redirected to http://www.example.com/feedbacks/2
+Completed 302 Found in 8ms (ActiveRecord: 2.8ms)
+Started GET "/feedbacks/2" for 127.0.0.1 at 2015-01-27 04:07:37 +0200
+Processing by FeedbacksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFeedback Load (0.3ms)[0m  [1mSELECT  "feedbacks".* FROM "feedbacks"  WHERE "feedbacks"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered feedbacks/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 7ms (Views: 2.7ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "feedbacks"
+  [1m[36m (2.0ms)[0m  [1mDELETE FROM "feedbacks";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (2.4ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'feedbacks';[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-27 02:07:37.047877"], ["text", "Final Job"], ["updated_at", "2015-01-27 02:07:37.047877"]]
+  [1m[35m (2.5ms)[0m  commit transaction
+Started GET "/feedbacks" for 127.0.0.1 at 2015-01-27 04:07:39 +0200
+Processing by FeedbacksController#index as HTML
+  [1m[36mFeedback Load (0.3ms)[0m  [1mSELECT "feedbacks".* FROM "feedbacks"[0m
+  Rendered feedbacks/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.3ms)
+Started GET "/assets/application.css" for 127.0.0.1 at 2015-01-27 04:07:39 +0200
+Started GET "/assets/application.js" for 127.0.0.1 at 2015-01-27 04:07:39 +0200
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "feedbacks"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/feedbacks" for 127.0.0.1 at 2015-01-27 04:08:05 +0200
+Processing by FeedbacksController#index as HTML
+  [1m[35mFeedback Load (0.1ms)[0m  SELECT "feedbacks".* FROM "feedbacks"
+  Rendered feedbacks/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 30ms (Views: 20.3ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "feedbacks"[0m
+Started GET "/feedbacks/new" for 127.0.0.1 at 2015-01-27 04:08:05 +0200
+Processing by FeedbacksController#new as HTML
+  Rendered feedbacks/_form.html.erb (220.2ms)
+  Rendered feedbacks/new.html.erb within layouts/application (223.3ms)
+Completed 200 OK in 225ms (Views: 224.7ms | ActiveRecord: 0.0ms)
+Started POST "/feedbacks" for 127.0.0.1 at 2015-01-27 04:08:05 +0200
+Processing by FeedbacksController#create as HTML
+  Parameters: {"utf8"=>"✓", "feedback"=>{"text"=>"Final Job"}, "commit"=>"Create Feedback"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-27 02:08:05.923961"], ["text", "Final Job"], ["updated_at", "2015-01-27 02:08:05.923961"]]
+  [1m[35m (10.2ms)[0m  commit transaction
+Redirected to http://www.example.com/feedbacks/2
+Completed 302 Found in 15ms (ActiveRecord: 10.5ms)
+Started GET "/feedbacks/2" for 127.0.0.1 at 2015-01-27 04:08:05 +0200
+Processing by FeedbacksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFeedback Load (0.2ms)[0m  [1mSELECT  "feedbacks".* FROM "feedbacks"  WHERE "feedbacks"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered feedbacks/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "feedbacks"
+  [1m[36m (2.1ms)[0m  [1mDELETE FROM "feedbacks";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (1.2ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'feedbacks';[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-27 02:08:05.953960"], ["text", "Final Job"], ["updated_at", "2015-01-27 02:08:05.953960"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+Started GET "/feedbacks" for 127.0.0.1 at 2015-01-27 04:08:08 +0200
+Processing by FeedbacksController#index as HTML
+  [1m[36mFeedback Load (0.3ms)[0m  [1mSELECT "feedbacks".* FROM "feedbacks"[0m
+  Rendered feedbacks/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 6ms (Views: 3.8ms | ActiveRecord: 0.3ms)
+Started GET "/assets/application.css" for 127.0.0.1 at 2015-01-27 04:08:08 +0200
+Started GET "/assets/application.js" for 127.0.0.1 at 2015-01-27 04:08:08 +0200
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "feedbacks"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/feedbacks" for 127.0.0.1 at 2015-01-27 04:08:31 +0200
+Processing by FeedbacksController#index as HTML
+  [1m[35mFeedback Load (0.1ms)[0m  SELECT "feedbacks".* FROM "feedbacks"
+  Rendered feedbacks/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 28ms (Views: 19.3ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "feedbacks"[0m
+Started GET "/feedbacks/new" for 127.0.0.1 at 2015-01-27 04:08:31 +0200
+Processing by FeedbacksController#new as HTML
+  Rendered feedbacks/_form.html.erb (216.8ms)
+  Rendered feedbacks/new.html.erb within layouts/application (220.0ms)
+Completed 200 OK in 223ms (Views: 221.7ms | ActiveRecord: 0.0ms)
+Started POST "/feedbacks" for 127.0.0.1 at 2015-01-27 04:08:31 +0200
+Processing by FeedbacksController#create as HTML
+  Parameters: {"utf8"=>"✓", "feedback"=>{"text"=>"Final Job"}, "commit"=>"Create Feedback"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-27 02:08:31.933567"], ["text", "Final Job"], ["updated_at", "2015-01-27 02:08:31.933567"]]
+  [1m[35m (4.3ms)[0m  commit transaction
+Redirected to http://www.example.com/feedbacks/2
+Completed 302 Found in 10ms (ActiveRecord: 4.7ms)
+Started GET "/feedbacks/2" for 127.0.0.1 at 2015-01-27 04:08:31 +0200
+Processing by FeedbacksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFeedback Load (0.2ms)[0m  [1mSELECT  "feedbacks".* FROM "feedbacks"  WHERE "feedbacks"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered feedbacks/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 4ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "feedbacks"
+  [1m[36m (3.1ms)[0m  [1mDELETE FROM "feedbacks";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (1.7ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'feedbacks';[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-27 02:08:31.958308"], ["text", "Final Job"], ["updated_at", "2015-01-27 02:08:31.958308"]]
+  [1m[35m (1.9ms)[0m  commit transaction
+Started GET "/feedbacks" for 127.0.0.1 at 2015-01-27 04:08:34 +0200
+Processing by FeedbacksController#index as HTML
+  [1m[36mFeedback Load (0.4ms)[0m  [1mSELECT "feedbacks".* FROM "feedbacks"[0m
+  Rendered feedbacks/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 8ms (Views: 5.5ms | ActiveRecord: 0.4ms)
+Started GET "/assets/application.css" for 127.0.0.1 at 2015-01-27 04:08:34 +0200
+Started GET "/assets/application.js" for 127.0.0.1 at 2015-01-27 04:08:34 +0200
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "feedbacks"
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/feedbacks" for 127.0.0.1 at 2015-01-27 04:10:12 +0200
+Processing by FeedbacksController#index as HTML
+  [1m[35mFeedback Load (0.1ms)[0m  SELECT "feedbacks".* FROM "feedbacks"
+  Rendered feedbacks/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 25ms (Views: 15.9ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "feedbacks"[0m
+Started GET "/feedbacks/new" for 127.0.0.1 at 2015-01-27 04:10:12 +0200
+Processing by FeedbacksController#new as HTML
+  Rendered feedbacks/_form.html.erb (209.3ms)
+  Rendered feedbacks/new.html.erb within layouts/application (212.3ms)
+Completed 200 OK in 214ms (Views: 214.0ms | ActiveRecord: 0.0ms)
+Started POST "/feedbacks" for 127.0.0.1 at 2015-01-27 04:10:12 +0200
+Processing by FeedbacksController#create as HTML
+  Parameters: {"utf8"=>"✓", "feedback"=>{"text"=>"Final Job"}, "commit"=>"Create Feedback"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-27 02:10:12.640469"], ["text", "Final Job"], ["updated_at", "2015-01-27 02:10:12.640469"]]
+  [1m[35m (4.8ms)[0m  commit transaction
+Redirected to http://www.example.com/feedbacks/2
+Completed 302 Found in 11ms (ActiveRecord: 5.2ms)
+Started GET "/feedbacks/2" for 127.0.0.1 at 2015-01-27 04:10:12 +0200
+Processing by FeedbacksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFeedback Load (0.3ms)[0m  [1mSELECT  "feedbacks".* FROM "feedbacks"  WHERE "feedbacks"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered feedbacks/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 6ms (Views: 2.5ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "feedbacks"
+  [1m[36m (2.4ms)[0m  [1mDELETE FROM "feedbacks";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (1.2ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'feedbacks';[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-27 02:10:12.668009"], ["text", "Final Job"], ["updated_at", "2015-01-27 02:10:12.668009"]]
+  [1m[35m (2.1ms)[0m  commit transaction
+Started GET "/feedbacks" for 127.0.0.1 at 2015-01-27 04:10:14 +0200
+Processing by FeedbacksController#index as HTML
+  [1m[36mFeedback Load (0.5ms)[0m  [1mSELECT "feedbacks".* FROM "feedbacks"[0m
+  Rendered feedbacks/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.5ms)
+Started GET "/assets/application.css" for 127.0.0.1 at 2015-01-27 04:10:14 +0200
+Started GET "/assets/application.js" for 127.0.0.1 at 2015-01-27 04:10:14 +0200
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "feedbacks"
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "feedbacks"[0m
+Started DELETE "/feedbacks/1" for 127.0.0.1 at 2015-01-27 04:10:16 +0200
+Processing by FeedbacksController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mFeedback Load (0.2ms)[0m  SELECT  "feedbacks".* FROM "feedbacks"  WHERE "feedbacks"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.4ms)[0m  DELETE FROM "feedbacks" WHERE "feedbacks"."id" = ?  [["id", 1]]
+  [1m[36m (20.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://127.0.0.1:48907/feedbacks
+Completed 302 Found in 40ms (ActiveRecord: 22.1ms)
+Started GET "/feedbacks" for 127.0.0.1 at 2015-01-27 04:10:16 +0200
+Processing by FeedbacksController#index as HTML
+  [1m[35mFeedback Load (0.2ms)[0m  SELECT "feedbacks".* FROM "feedbacks"
+  Rendered feedbacks/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 16ms (Views: 13.9ms | ActiveRecord: 0.2ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/feedbacks" for 127.0.0.1 at 2015-01-27 04:20:17 +0200
+Processing by FeedbacksController#index as HTML
+  [1m[35mFeedback Load (0.1ms)[0m  SELECT "feedbacks".* FROM "feedbacks"
+  Rendered feedbacks/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 25ms (Views: 16.1ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "feedbacks"[0m
+Started GET "/feedbacks/new" for 127.0.0.1 at 2015-01-27 04:20:17 +0200
+Processing by FeedbacksController#new as HTML
+  Rendered feedbacks/_form.html.erb (233.3ms)
+  Rendered feedbacks/new.html.erb within layouts/application (235.6ms)
+Completed 200 OK in 237ms (Views: 236.8ms | ActiveRecord: 0.0ms)
+Started POST "/feedbacks" for 127.0.0.1 at 2015-01-27 04:20:18 +0200
+Processing by FeedbacksController#create as HTML
+  Parameters: {"utf8"=>"✓", "feedback"=>{"text"=>"Final Job"}, "commit"=>"Create Feedback"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-27 02:20:18.098337"], ["text", "Final Job"], ["updated_at", "2015-01-27 02:20:18.098337"]]
+  [1m[35m (3.0ms)[0m  commit transaction
+Redirected to http://www.example.com/feedbacks/2
+Completed 302 Found in 8ms (ActiveRecord: 3.4ms)
+Started GET "/feedbacks/2" for 127.0.0.1 at 2015-01-27 04:20:18 +0200
+Processing by FeedbacksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFeedback Load (0.3ms)[0m  [1mSELECT  "feedbacks".* FROM "feedbacks"  WHERE "feedbacks"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered feedbacks/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 6ms (Views: 2.0ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "feedbacks"
+  [1m[36m (4.2ms)[0m  [1mDELETE FROM "feedbacks";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (2.9ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'feedbacks';[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-27 02:20:18.128470"], ["text", "New Job"], ["updated_at", "2015-01-27 02:20:18.128470"]]
+  [1m[35m (3.8ms)[0m  commit transaction
+Started GET "/feedbacks" for 127.0.0.1 at 2015-01-27 04:20:18 +0200
+Processing by FeedbacksController#index as HTML
+  [1m[36mFeedback Load (0.1ms)[0m  [1mSELECT "feedbacks".* FROM "feedbacks"[0m
+  Rendered feedbacks/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "feedbacks"
+Started GET "/feedbacks/1/edit" for 127.0.0.1 at 2015-01-27 04:20:18 +0200
+Processing by FeedbacksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFeedback Load (0.2ms)[0m  [1mSELECT  "feedbacks".* FROM "feedbacks"  WHERE "feedbacks"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered feedbacks/_form.html.erb (2.4ms)
+  Rendered feedbacks/edit.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 8ms (Views: 5.3ms | ActiveRecord: 0.2ms)
+Started PATCH "/feedbacks/1" for 127.0.0.1 at 2015-01-27 04:20:18 +0200
+Processing by FeedbacksController#update as HTML
+  Parameters: {"utf8"=>"✓", "feedback"=>{"text"=>"Edit Job"}, "commit"=>"Update Feedback", "id"=>"1"}
+  [1m[35mFeedback Load (0.2ms)[0m  SELECT  "feedbacks".* FROM "feedbacks"  WHERE "feedbacks"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "feedbacks" SET "text" = ?, "updated_at" = ? WHERE "feedbacks"."id" = 1  [["text", "Edit Job"], ["updated_at", "2015-01-27 02:20:18.168586"]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://www.example.com/feedbacks/1
+Completed 302 Found in 19ms (ActiveRecord: 2.6ms)
+Started GET "/feedbacks/1" for 127.0.0.1 at 2015-01-27 04:20:18 +0200
+Processing by FeedbacksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mFeedback Load (0.3ms)[0m  SELECT  "feedbacks".* FROM "feedbacks"  WHERE "feedbacks"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered feedbacks/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "feedbacks"[0m
+  [1m[35m (2.4ms)[0m  DELETE FROM "feedbacks";
+  [1m[36m (0.1ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (1.8ms)[0m  DELETE FROM sqlite_sequence where name = 'feedbacks';
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)  [["created_at", "2015-01-27 02:20:18.188193"], ["text", "Final Job"], ["updated_at", "2015-01-27 02:20:18.188193"]]
+  [1m[36m (64.1ms)[0m  [1mcommit transaction[0m
+Started GET "/feedbacks" for 127.0.0.1 at 2015-01-27 04:20:20 +0200
+Processing by FeedbacksController#index as HTML
+  [1m[35mFeedback Load (0.3ms)[0m  SELECT "feedbacks".* FROM "feedbacks"
+  Rendered feedbacks/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 6ms (Views: 3.9ms | ActiveRecord: 0.3ms)
+Started GET "/assets/application.css" for 127.0.0.1 at 2015-01-27 04:20:20 +0200
+Started GET "/assets/application.js" for 127.0.0.1 at 2015-01-27 04:20:20 +0200
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "feedbacks"[0m
+Started DELETE "/feedbacks/1" for 127.0.0.1 at 2015-01-27 04:20:20 +0200
+Processing by FeedbacksController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "feedbacks"
+  [1m[36mFeedback Load (0.1ms)[0m  [1mSELECT  "feedbacks".* FROM "feedbacks"  WHERE "feedbacks"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "feedbacks" WHERE "feedbacks"."id" = ?[0m  [["id", 1]]
+  [1m[35m (20.7ms)[0m  commit transaction
+Redirected to http://127.0.0.1:35774/feedbacks
+Completed 302 Found in 28ms (ActiveRecord: 21.4ms)
+Started GET "/feedbacks" for 127.0.0.1 at 2015-01-27 04:20:20 +0200
+Processing by FeedbacksController#index as HTML
+  [1m[36mFeedback Load (0.2ms)[0m  [1mSELECT "feedbacks".* FROM "feedbacks"[0m
+  Rendered feedbacks/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 11ms (Views: 8.5ms | ActiveRecord: 0.2ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/feedbacks" for 127.0.0.1 at 2015-01-27 04:20:44 +0200
+Processing by FeedbacksController#index as HTML
+  [1m[35mFeedback Load (0.1ms)[0m  SELECT "feedbacks".* FROM "feedbacks"
+  Rendered feedbacks/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 25ms (Views: 16.5ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "feedbacks"[0m
+Started GET "/feedbacks/new" for 127.0.0.1 at 2015-01-27 04:20:44 +0200
+Processing by FeedbacksController#new as HTML
+  Rendered feedbacks/_form.html.erb (224.0ms)
+  Rendered feedbacks/new.html.erb within layouts/application (226.5ms)
+Completed 200 OK in 228ms (Views: 227.6ms | ActiveRecord: 0.0ms)
+Started POST "/feedbacks" for 127.0.0.1 at 2015-01-27 04:20:45 +0200
+Processing by FeedbacksController#create as HTML
+  Parameters: {"utf8"=>"✓", "feedback"=>{"text"=>"Final Job"}, "commit"=>"Create Feedback"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-27 02:20:45.223157"], ["text", "Final Job"], ["updated_at", "2015-01-27 02:20:45.223157"]]
+  [1m[35m (12.9ms)[0m  commit transaction
+Redirected to http://www.example.com/feedbacks/2
+Completed 302 Found in 18ms (ActiveRecord: 13.2ms)
+Started GET "/feedbacks/2" for 127.0.0.1 at 2015-01-27 04:20:45 +0200
+Processing by FeedbacksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFeedback Load (0.2ms)[0m  [1mSELECT  "feedbacks".* FROM "feedbacks"  WHERE "feedbacks"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered feedbacks/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "feedbacks"
+  [1m[36m (2.3ms)[0m  [1mDELETE FROM "feedbacks";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (2.8ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'feedbacks';[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", "2015-01-27 02:20:45.256969"], ["text", "New Job"], ["updated_at", "2015-01-27 02:20:45.256969"]]
+  [1m[35m (1.7ms)[0m  commit transaction
+Started GET "/feedbacks" for 127.0.0.1 at 2015-01-27 04:20:45 +0200
+Processing by FeedbacksController#index as HTML
+  [1m[36mFeedback Load (0.1ms)[0m  [1mSELECT "feedbacks".* FROM "feedbacks"[0m
+  Rendered feedbacks/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "feedbacks"
+Started GET "/feedbacks/1/edit" for 127.0.0.1 at 2015-01-27 04:20:45 +0200
+Processing by FeedbacksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFeedback Load (0.1ms)[0m  [1mSELECT  "feedbacks".* FROM "feedbacks"  WHERE "feedbacks"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered feedbacks/_form.html.erb (1.9ms)
+  Rendered feedbacks/edit.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.1ms)
+Started PATCH "/feedbacks/1" for 127.0.0.1 at 2015-01-27 04:20:45 +0200
+Processing by FeedbacksController#update as HTML
+  Parameters: {"utf8"=>"✓", "feedback"=>{"text"=>"Edit Job"}, "commit"=>"Update Feedback", "id"=>"1"}
+  [1m[35mFeedback Load (0.1ms)[0m  SELECT  "feedbacks".* FROM "feedbacks"  WHERE "feedbacks"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "feedbacks" SET "text" = ?, "updated_at" = ? WHERE "feedbacks"."id" = 1  [["text", "Edit Job"], ["updated_at", "2015-01-27 02:20:45.287959"]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://www.example.com/feedbacks/1
+Completed 302 Found in 18ms (ActiveRecord: 2.7ms)
+Started GET "/feedbacks/1" for 127.0.0.1 at 2015-01-27 04:20:45 +0200
+Processing by FeedbacksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mFeedback Load (0.1ms)[0m  SELECT  "feedbacks".* FROM "feedbacks"  WHERE "feedbacks"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered feedbacks/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "feedbacks"[0m
+  [1m[35m (2.9ms)[0m  DELETE FROM "feedbacks";
+  [1m[36m (0.3ms)[0m  [1mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (1.9ms)[0m  DELETE FROM sqlite_sequence where name = 'feedbacks';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "feedbacks" ("created_at", "text", "updated_at") VALUES (?, ?, ?)  [["created_at", "2015-01-27 02:20:45.306308"], ["text", "Final Job"], ["updated_at", "2015-01-27 02:20:45.306308"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+Started GET "/feedbacks" for 127.0.0.1 at 2015-01-27 04:20:47 +0200
+Processing by FeedbacksController#index as HTML
+  [1m[35mFeedback Load (0.3ms)[0m  SELECT "feedbacks".* FROM "feedbacks"
+  Rendered feedbacks/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.3ms)
+Started GET "/assets/application.css" for 127.0.0.1 at 2015-01-27 04:20:47 +0200
+Started GET "/assets/application.js" for 127.0.0.1 at 2015-01-27 04:20:47 +0200
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "feedbacks"[0m
+Started DELETE "/feedbacks/1" for 127.0.0.1 at 2015-01-27 04:20:47 +0200
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "feedbacks"
+Processing by FeedbacksController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFeedback Load (0.2ms)[0m  [1mSELECT  "feedbacks".* FROM "feedbacks"  WHERE "feedbacks"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "feedbacks" WHERE "feedbacks"."id" = ?[0m  [["id", 1]]
+  [1m[35m (26.6ms)[0m  commit transaction
+Redirected to http://127.0.0.1:50949/feedbacks
+Completed 302 Found in 30ms (ActiveRecord: 27.0ms)
+Started GET "/feedbacks" for 127.0.0.1 at 2015-01-27 04:20:47 +0200
+Processing by FeedbacksController#index as HTML
+  [1m[36mFeedback Load (0.2ms)[0m  [1mSELECT "feedbacks".* FROM "feedbacks"[0m
+  Rendered feedbacks/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 5ms (Views: 2.2ms | ActiveRecord: 0.2ms)
